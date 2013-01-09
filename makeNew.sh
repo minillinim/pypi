@@ -3,8 +3,8 @@ echo "Creating pypi project $1"
 lc=$(echo $1 | awk '{print tolower($1)}')
 
 mkdir -p bin
-touch bin/$lc.py
-chmod +x bin/$lc.py
+touch bin/$1
+chmod +x bin/$1
 mkdir -p docs
 
 echo "v0.0.1, <date> -- Initial release." > CHANGES.txt
@@ -20,7 +20,7 @@ setup(
     author='Michael Imelfort',
     author_email='mike@mikeimelfort.com',
     packages=['$lc', '$lc.test'],
-    scripts=['bin/$lc.py'],
+    scripts=['bin/$1'],
     url='http://pypi.python.org/pypi/$1/',
     license='LICENSE.txt',
     description='$1',
@@ -35,6 +35,7 @@ cp $script_path/LICENSE.txt .
 # make sw dir
 mkdir -p $lc
 touch $lc/__init__.py
+touch $lc/$1.py
 mkdir -p $lc/test
 touch $lc/test/__init__.py
 
