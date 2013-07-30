@@ -1,3 +1,5 @@
-pypi!
+Just here for kicks,
 
-Does the 'hard' work of all that pypi boilerplate stuff
+This code has been totally outclassed by outstandingKnife
+
+https://github.com/minillinim/outstandingKnife
